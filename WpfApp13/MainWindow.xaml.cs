@@ -20,5 +20,41 @@ namespace WpfApp13
         {
             InitializeComponent();
         }
+
+        private void usun_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainTabControl.Items.Count > 0) 
+            {
+                MainTabControl.Items.Remove(MainTabControl.SelectedItem);
+            }
+        }
+
+        private void dodaj_Click(object sender, RoutedEventArgs e)
+        {
+            
+            TabItem newtab = new TabItem
+            {
+                Header = $"Tab {MainTabControl.Items.Count + 1}",
+                Content = new TextBlock { Text = $"Zawartość Zakładki {MainTabControl.Items.Count + 1}" }
+            };
+            MainTabControl.Items.Add(newtab);
+            MainTabControl.SelectedItem = newtab;
+        }
+
+       
+        private void new_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

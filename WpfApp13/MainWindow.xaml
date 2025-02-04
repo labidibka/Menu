@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-      
+        <TabControl x:Name="MainTabControl" Margin="0,38,0,0">
+            <TabItem Header="Tab 1" BorderBrush="Black" >
+                <TextBlock Text="Zawartość tab 1" FontSize="24"></TextBlock>
+            </TabItem>
+            <TabItem Header="Tab 2" BorderBrush="Black">
+                <TextBlock Text="Zawartość Tab 2" FontSize="24"></TextBlock>
+            </TabItem>
+            <TabItem Header="Tab 3" BorderBrush="Black">
+                <TextBlock Text="Zawartość Tab 3" FontSize="24"></TextBlock>
+            </TabItem>
+        </TabControl>
+        <ToolBar HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="195" x:Name="MyToolBar" Background="White">
+            <Button BorderBrush="Black" Content="Nowa Zakładka" x:Name="dodaj" Click="dodaj_Click"/>
+            <Button BorderBrush="Black" Content="Zamknij Tab" x:Name="usun" Click="usun_Click"/>
+        </ToolBar>
+        <Menu Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="42" Margin="358,10,0,0">
+            <MenuItem Header="File" x:Name="MenuItem">
+                <MenuItem Header="_New Tab" x:Name="new" Click="new_Click"/>
+                <MenuItem Header="_Close Tab" x:Name="close" Click="close_Click"/>
+                <Separator/>
+                <MenuItem Header="_Exit" x:Name="exit" Click="exit_Click"/>
+            </MenuItem>
+
+        </Menu>
+
     </Grid>
 </Window>
