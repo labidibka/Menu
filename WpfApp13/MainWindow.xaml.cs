@@ -34,8 +34,10 @@ namespace WpfApp13
             
             TabItem newtab = new TabItem
             {
+              
                 Header = $"Tab {MainTabControl.Items.Count + 1}",
                 Content = new TextBlock { Text = $"Zawartość Zakładki {MainTabControl.Items.Count + 1}" }
+                
             };
             MainTabControl.Items.Add(newtab);
             MainTabControl.SelectedItem = newtab;
@@ -49,12 +51,12 @@ namespace WpfApp13
 
         private void close_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void exit_Click(object sender, RoutedEventArgs e)
         {
-            
+            Application.Current.Shutdown();
         }
     }
 }
